@@ -1,0 +1,85 @@
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: #1a2233; background: #f4f6fa; line-height: 1.55; }
+a { color: #0b5fff; }
+h1 { font-size: 2rem; line-height: 1.2; margin: 0.4rem 0 0.6rem; }
+h2 { font-size: 1.15rem; margin: 0 0 0.75rem; }
+p { margin: 0.5rem 0; }
+.container { max-width: 1080px; margin: 0 auto; padding: 0 16px 64px; }
+.topbar { display: flex; align-items: center; gap: 20px; padding: 14px 16px; max-width: 1080px; margin: 0 auto; }
+.logo { font-weight: 800; font-size: 1.35rem; color: #0b1e4b; text-decoration: none; }
+.logo span { color: #0b5fff; }
+.topbar nav { display: flex; gap: 16px; margin-left: auto; }
+.topbar nav a { text-decoration: none; color: #33415e; font-weight: 600; }
+.topbar nav a:hover { text-decoration: underline; }
+.hero { text-align: center; padding: 28px 16px 8px; max-width: 760px; margin: 0 auto; }
+.hero p.lede { font-size: 1.1rem; color: #44506a; }
+.badge-row { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+.badge { background: #e3ecff; color: #0b3d91; border-radius: 999px; padding: 4px 12px; font-size: 0.85rem; font-weight: 600; }
+.generator { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; margin-top: 24px; }
+@media (max-width: 900px) { .generator { grid-template-columns: 1fr; } }
+.panel { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; margin-bottom: 16px; }
+.panel label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 10px; }
+.panel input, .panel select, .panel textarea { width: 100%; padding: 9px 10px; margin-top: 4px; border: 1px solid #cbd5e1; border-radius: 8px; font: inherit; font-weight: 400; background: #fff; }
+.panel textarea { resize: vertical; }
+.row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+.inline { display: flex; gap: 8px; }
+.inline select { flex: 0 0 130px; }
+.hint { font-size: 0.85rem; color: #64748b; font-weight: 400; }
+.item-row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+.item-row input { padding: 8px; border: 1px solid #cbd5e1; border-radius: 8px; font: inherit; width: 70px; }
+.item-row input.grow { flex: 1; width: auto; }
+.item-row .amount { min-width: 90px; text-align: right; font-weight: 600; font-size: 0.9rem; }
+.btn { display: inline-block; padding: 10px 16px; border-radius: 8px; border: 1px solid #cbd5e1; background: #fff; font: inherit; font-weight: 600; cursor: pointer; color: #1a2233; text-decoration: none; }
+.btn:hover { background: #f1f5f9; }
+.btn.primary { background: #0b5fff; border-color: #0b5fff; color: #fff; }
+.btn.primary:hover { background: #0047d6; }
+.btn.ghost.small { padding: 4px 10px; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+.preview-wrap { position: sticky; top: 16px; }
+@media (max-width: 900px) { .preview-wrap { position: static; } }
+.preview { background: #fff; border: 1px solid #e2e8f0; border-radius: 4px; padding: 36px 32px; box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08); font-size: 0.95rem; }
+.doc-head { display: flex; justify-content: space-between; gap: 16px; border-bottom: 3px solid #0b1e4b; padding-bottom: 16px; margin-bottom: 20px; }
+.doc-logo { max-height: 56px; max-width: 180px; object-fit: contain; margin-bottom: 8px; }
+.doc-biz { font-weight: 800; font-size: 1.25rem; color: #0b1e4b; }
+.doc-meta { color: #64748b; font-size: 0.88rem; white-space: pre-line; }
+.doc-type { font-size: 1.9rem; font-weight: 800; letter-spacing: 0.08em; color: #0b1e4b; text-align: right; }
+.doc-num { text-align: right; color: #64748b; }
+.doc-cols { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+.doc-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #64748b; font-weight: 700; margin-bottom: 4px; }
+.doc-client { font-weight: 700; font-size: 1.05rem; }
+.doc-dates { text-align: right; font-size: 0.9rem; }
+.doc-dates span { color: #64748b; }
+.doc-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+.doc-table th { text-align: left; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: #64748b; border-bottom: 2px solid #e2e8f0; padding: 8px 6px; }
+.doc-table th:nth-child(n+2), .doc-table td:nth-child(n+2) { text-align: right; }
+.doc-table td { padding: 10px 6px; border-bottom: 1px solid #f1f5f9; }
+.doc-totals { margin-left: auto; width: 280px; max-width: 100%; }
+.doc-totals > div { display: flex; justify-content: space-between; padding: 5px 0; }
+.doc-totals .grand { border-top: 2px solid #0b1e4b; margin-top: 6px; padding-top: 10px; font-weight: 800; font-size: 1.15rem; }
+.doc-section { margin-top: 20px; }
+.doc-section p { white-space: pre-line; margin: 0; }
+.doc-foot { margin-top: 28px; padding-top: 12px; border-top: 1px solid #e2e8f0; color: #94a3b8; font-size: 0.8rem; text-align: center; }
+.faq { max-width: 760px; margin: 40px auto 0; }
+.faq h2 { font-size: 1.4rem; }
+.faq details { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; }
+.faq summary { font-weight: 700; cursor: pointer; }
+.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; max-width: 760px; margin: 24px auto; }
+.plan { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; }
+.plan h2 { font-size: 1.3rem; }
+.plan .price { font-size: 2rem; font-weight: 800; margin: 8px 0; }
+.plan ul { padding-left: 20px; }
+.plan li { margin-bottom: 6px; }
+.coming { display: inline-block; background: #fef3c7; color: #92400e; border-radius: 999px; padding: 3px 10px; font-size: 0.8rem; font-weight: 700; }
+.footer { text-align: center; color: #64748b; font-size: 0.88rem; margin-top: 48px; }
+.footer a { color: #64748b; }
+
+@media print {
+  body { background: #fff; }
+  .no-print, .topbar, .hero, .faq, .footer { display: none !important; }
+  .container { max-width: none; padding: 0; }
+  .generator { display: block; }
+  .preview-wrap { position: static; }
+  .preview { border: none; box-shadow: none; padding: 0; border-radius: 0; }
+  @page { size: A4; margin: 14mm; }
+}
