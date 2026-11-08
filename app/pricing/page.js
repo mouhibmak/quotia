@@ -5,8 +5,41 @@ export const metadata = {
 };
 
 export default function PricingPage() {
+  const FAQ = [
+    {
+      q: 'Is the invoice generator really free?',
+      a: 'Yes. Invoices, quotes and receipts are free forever — unlimited, no account, no watermark, no card required.',
+    },
+    {
+      q: 'What will Pro cost when it launches?',
+      a: 'Pro is planned at $12 per month. It is not available yet: there is no checkout on this site and no payment is collected.',
+    },
+    {
+      q: 'Will the Free plan stay free when Pro launches?',
+      a: 'Yes. Everything in the Free plan — unlimited documents, 10 currencies, logo upload, clean PDF — stays free.',
+    },
+    {
+      q: 'Do I need an account to use the free tools?',
+      a: 'No. There is no sign-up and no login. Your data stays in your own browser.',
+    },
+  ];
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQ.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section className="hero">
         <h1>Pricing</h1>
         <p className="lede">
@@ -47,6 +80,20 @@ export default function PricingPage() {
           <p className="hint">Everything in the Free plan stays free when Pro launches.</p>
         </div>
       </div>
+
+      <section className="faq">
+        <h2>Frequently asked questions</h2>
+        {FAQ.map((f) => (
+          <details key={f.q}>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+        <p>
+          Ready to make one? Start with the{' '}
+          <a href="/">free invoice generator</a>.
+        </p>
+      </section>
     </>
   );
 }

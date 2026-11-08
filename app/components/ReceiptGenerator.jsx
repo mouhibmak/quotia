@@ -39,6 +39,7 @@ function defaultState() {
     amount: 500,
     paymentMethod: 'Bank transfer',
     notes: 'Thank you for your payment.',
+    template: 'classic',
   };
 }
 
@@ -141,6 +142,16 @@ export default function ReceiptGenerator() {
               ))}
             </select>
           </label>
+          <label>Template
+            <select value={state.template || 'classic'} onChange={(e) => set({ template: e.target.value })}>
+              <option value="classic">Classic — navy header, bold totals</option>
+              <option value="freelancer">Freelancer — clean teal accent</option>
+              <option value="minimal">Minimal — light, monochrome, thin lines</option>
+              <option value="bold">Bold — dark header, high-contrast totals</option>
+              <option value="elegant">Elegant — serif, warm, understated</option>
+            </select>
+          </label>
+          <p className="hint">The template changes the look of the preview and the PDF only — the numbers stay the same.</p>
         </div>
 
         <div className="panel">
@@ -158,7 +169,7 @@ export default function ReceiptGenerator() {
 
       {/* Printable preview */}
       <div className="preview-wrap">
-        <div className="preview" id="print-area">
+        <div className={`preview template-${state.template || 'classic'}`} id="print-area">
           <div className="doc-head">
             <div>
               {state.logo ? <img src={state.logo} alt="Business logo" className="doc-logo" /> : null}

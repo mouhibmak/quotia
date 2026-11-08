@@ -73,6 +73,24 @@ p { margin: 0.5rem 0; }
 .preview.template-minimal .doc-totals .grand { border-top: 1px solid #94a3b8; }
 .preview.template-minimal .doc-table th { border-bottom: 1px solid #e2e8f0; }
 
+/* Bold — strong dark accent, high-contrast totals */
+.preview.template-bold .doc-head { border-bottom: 4px solid #111827; }
+.preview.template-bold .doc-biz, .preview.template-bold .doc-type { color: #111827; }
+.preview.template-bold .doc-type { letter-spacing: 0.12em; }
+.preview.template-bold .doc-table th { background: #111827; color: #fff; border-bottom-color: #111827; padding: 8px 10px; }
+.preview.template-bold .doc-totals .grand { border-top: 3px solid #111827; }
+.preview.template-bold .doc-label { color: #111827; }
+
+/* Elegant — serif type, warm cream paper, muted gold accent */
+.preview.template-elegant { font-family: Georgia, 'Times New Roman', serif; background: #fdfbf7; }
+.preview.template-elegant .doc-head { border-bottom: 1px solid #d6c9a8; }
+.preview.template-elegant .doc-biz, .preview.template-elegant .doc-type { color: #6b4f1d; }
+.preview.template-elegant .doc-type { font-weight: 700; letter-spacing: 0.04em; }
+.preview.template-elegant .doc-totals .grand { border-top: 1px solid #b45309; }
+.preview.template-elegant .doc-table th { border-bottom: 1px solid #d6c9a8; color: #8a6d3b; }
+.preview.template-elegant .doc-label { color: #8a6d3b; }
+.preview.template-elegant .doc-foot { border-top-color: #e7dcc3; }
+
 /* Receipt */
 .receipt-amount { font-size: 2.4rem; font-weight: 800; color: #0b1e4b; margin: 4px 0 12px; }
 .receipt-rows { margin: 8px 0 4px; }

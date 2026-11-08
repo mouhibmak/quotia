@@ -180,6 +180,8 @@ export default function DocGenerator({ docType }) {
               <option value="classic">Classic — navy header, bold totals</option>
               <option value="freelancer">Freelancer — clean teal accent</option>
               <option value="minimal">Minimal — light, monochrome, thin lines</option>
+              <option value="bold">Bold — dark header, high-contrast totals</option>
+              <option value="elegant">Elegant — serif, warm, understated</option>
             </select>
           </label>
           <p className="hint">The template changes the look of the preview and the PDF only — the numbers stay the same.</p>
