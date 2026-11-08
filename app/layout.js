@@ -26,6 +26,7 @@ export default function RootLayout({ children }) {
           <nav>
             <Link href="/">Invoice</Link>
             <Link href="/quote">Quote</Link>
+            <Link href="/receipt">Receipt</Link>
             <Link href="/pricing">Pricing</Link>
           </nav>
         </header>

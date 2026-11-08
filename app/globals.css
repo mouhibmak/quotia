@@ -60,6 +60,24 @@ p { margin: 0.5rem 0; }
 .doc-section { margin-top: 20px; }
 .doc-section p { white-space: pre-line; margin: 0; }
 .doc-foot { margin-top: 28px; padding-top: 12px; border-top: 1px solid #e2e8f0; color: #94a3b8; font-size: 0.8rem; text-align: center; }
+
+/* Document templates — invoice & quote preview (Classic is the default) */
+.preview.template-freelancer .doc-head { border-bottom-color: #0d9488; }
+.preview.template-freelancer .doc-biz, .preview.template-freelancer .doc-type { color: #0f766e; }
+.preview.template-freelancer .doc-totals .grand { border-top-color: #0d9488; }
+.preview.template-freelancer .doc-table th { border-bottom-color: #99f6e4; }
+.preview.template-minimal { font-size: 0.9rem; }
+.preview.template-minimal .doc-head { border-bottom: 1px solid #e2e8f0; }
+.preview.template-minimal .doc-type { color: #334155; font-weight: 700; letter-spacing: 0.02em; }
+.preview.template-minimal .doc-biz { color: #334155; }
+.preview.template-minimal .doc-totals .grand { border-top: 1px solid #94a3b8; }
+.preview.template-minimal .doc-table th { border-bottom: 1px solid #e2e8f0; }
+
+/* Receipt */
+.receipt-amount { font-size: 2.4rem; font-weight: 800; color: #0b1e4b; margin: 4px 0 12px; }
+.receipt-rows { margin: 8px 0 4px; }
+.receipt-rows > div { display: flex; justify-content: space-between; gap: 16px; padding: 7px 0; border-bottom: 1px solid #f1f5f9; }
+.receipt-rows > div span:first-child { color: #64748b; }
 .faq { max-width: 760px; margin: 40px auto 0; }
 .faq h2 { font-size: 1.4rem; }
 .faq details { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; }
